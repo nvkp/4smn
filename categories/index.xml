@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 4SMN Security Management</title>
-    <link>/categories/</link>
+    <link>https://nvkp.github.io/4smn/categories/</link>
     <description>Recent content in Categories on 4SMN Security Management</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>cs-CZ</language><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>cs-CZ</language><atom:link href="https://nvkp.github.io/4smn/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
