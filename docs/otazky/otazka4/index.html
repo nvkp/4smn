@@ -5,9 +5,13 @@
   <meta name="generator" content="Hugo 0.80.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Logická bezpečnost #  řízení přístupů — autorizace, autentizace, šifrování — principy vybrané algoritmy, elektronický podpis">
+<meta name="description" content="Logická bezpečnost #  řízení přístupů — autorizace, autentizace, šifrování — principy vybrané algoritmy, elektronický podpis
+Při řízení přístupu je ověřována úroveň oprávnění a práv uživatele (Autorizace) k určitému zdroji nebo objektu. Zdrojem může být připojení k síti, využití kapacity paměťového média, přístup k počítačovým systémům (serverům, síťovým prvkům, tiskárnám aj.) atd., zatímco objektem jsou například data uložená v určitém adresáři, nebo samostatný soubor.
+Ověřovaným objektem může být oprávnění uživatele, skupiny, ale i samotných počítačových systémů.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Logická bezpečnost" />
-<meta property="og:description" content="Logická bezpečnost #  řízení přístupů — autorizace, autentizace, šifrování — principy vybrané algoritmy, elektronický podpis" />
+<meta property="og:description" content="Logická bezpečnost #  řízení přístupů — autorizace, autentizace, šifrování — principy vybrané algoritmy, elektronický podpis
+Při řízení přístupu je ověřována úroveň oprávnění a práv uživatele (Autorizace) k určitému zdroji nebo objektu. Zdrojem může být připojení k síti, využití kapacity paměťového média, přístup k počítačovým systémům (serverům, síťovým prvkům, tiskárnám aj.) atd., zatímco objektem jsou například data uložená v určitém adresáři, nebo samostatný soubor.
+Ověřovaným objektem může být oprávnění uživatele, skupiny, ale i samotných počítačových systémů." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://nvkp.github.io/4smn/docs/otazky/otazka4/" />
 
@@ -15,7 +19,7 @@
 <link rel="manifest" href="/4smn/manifest.json">
 <link rel="icon" href="/4smn/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/4smn/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="/4smn/en.search.min.8087d412f2fecbdea2d711cc0ef4948ce400d11b843a2fb7c77de490e1a9948e.js" integrity="sha256-gIfUEvL&#43;y96i1xHMDvSUjOQA0RuEOi&#43;3x33kkOGplI4="></script>
+<script defer src="/4smn/en.search.min.5a07fcb22556c0f342977292810f16cde9263580e7132e62cd0a1d9aee189d6f.js" integrity="sha256-Wgf8siVWwPNCl3KSgQ8WzekmNYDnEy5izQodmu4YnW8="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -312,7 +316,23 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#šifrování">Šifrování</a>
+      <ul>
+        <li><a href="#typy-šifer">Typy šifer</a></li>
+      </ul>
+    </li>
+    <li><a href="#digitální-podpis">Digitální podpis</a>
+      <ul>
+        <li><a href="#proces-vzniku-podpisu">Proces vzniku podpisu</a></li>
+        <li><a href="#ověření-podpisu">Ověření podpisu</a></li>
+        <li><a href="#bezpečnost-podpisu">Bezpečnost podpisu</a></li>
+        <li><a href="#použití-podpisu">Použití podpisu</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
 
@@ -328,6 +348,67 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#logick%c3%a1-bezpe%c4%8dnost">#</a>
 </h1>
 <p><em>řízení přístupů — autorizace, autentizace, šifrování — principy vybrané algoritmy, elektronický podpis</em></p>
+<p>Při řízení přístupu je <strong>ověřována úroveň oprávnění a práv uživatele (Autorizace)</strong> k určitému zdroji nebo objektu. <strong>Zdrojem</strong> může být připojení k síti, využití kapacity paměťového média, přístup k počítačovým systémům (serverům, síťovým prvkům, tiskárnám aj.) atd., zatímco <strong>objektem</strong> jsou například data uložená v určitém adresáři, nebo samostatný soubor.</p>
+<p>Ověřovaným objektem může být oprávnění uživatele, skupiny, ale i samotných počítačových systémů. Uživatel může mít stejná práva jako ostatní členové skupiny a zároveň i nějaká oprávnění, která má pouze dotyčný uživatel. Rozdělení uživatelů do skupin je velmi praktické, obvykle se v organizaci vyskytují určité skupiny uživatelů, kteří využívají stejné zdroje.</p>
+<p><strong>Granularita nastavení práv</strong> závisí na používaném systému. Obvykle je možné pro soubory a adresáře určit minimálně oprávnění pro čtení, zápis, odstranění, spuštění a změnu vlastníka souboru či adresáře.</p>
+<p>Aby vůbec mohlo dojít k řízení uživatelských přístupů, musí být nejprve systémem <strong>ověřena identita uživatele (Autentizace)</strong>. Nejčastěji lze ověřit identitu uživatele na základě toho:</p>
+<ul>
+<li>co zná</li>
+<li>co vlastní</li>
+<li>čím je</li>
+</ul>
+<p>Nejběžnějším je ověření uživatele na základě toho, co zná v podobě hesla (určitého řetězce znaků), který uživatel obvykle na základě výzvy systému zadá. Zadané heslo je následně porovnáno s heslem již dříve uloženým uživatelem do systému. Pokud se hesla shodují, je uživatel přihlášen a jsou mu přidělena oprávnění. Výhodou hesel je jejich snadné použití a snadná implementace do systému. Čím je však heslo kvalitnější, tím je obvykle pro uživatele hůře zapamatovatelné. Nevýhodou hesla je, že je lze odpozorovat či předat.</p>
+<p>Ověření uživatele na základě vlastnictví předmětu bývá realizováno díky držení určitého tokenu uživatelem (např. čipové karty, klíče, aj.). Tuto funkci dnes může převzít například i mobilní telefon. Nevýhodou ověření na základě vlastnictví předmětu je skutečnost, že i tato zařízení je možné předat, zcizit, ztratit. Navíc jsou s jejich použitím často spojeny výrazně vyšší náklady než při ověření na základě toho, co uživatel zná.</p>
+<p>Ověřením uživatele na základě toho čím je se zabývá biometrie, která rozpoznává jedinečné biologické charakteristiky daného uživatele. Existuje několik charakteristik, u nichž se předpokládá nebo je matematicky prokázáno, že jsou pro každého člověka unikátní. Uvedené charakteristiky jsou často využívány jinými vědními obory (např. kriminalistika) k jedinečné identifikaci člověka.</p>
+<p>Uživatele je možné ověřovat podle otisku prstu, podle obličeje, dynamiky při psaní, hlasu, mozkových vln, oční duhovky, krevního řečiště atd. Nicméně ne všechny tyto možnosti najdou v současné době běžné využití v praxi. Nevýhodu ověření uživatele na základě toho, čím je, představuje nutnost pořízení speciálního hardwaru, nemožnost změnit „heslo“ v případě prozrazení používaných charakteristik a možnost napodobení některých biometrických údajů.</p>
+<p>Za vhodnou a pro většinu běžných aplikací a systémů dostatečnou, lze označit autentizaci, která využívá dva z výše uvedených způsobů a kombinuje tak například znalost hesla s vlastnictvím zařízení, nebo s biometrickými údaji. V takovém případě mluvíme o dvoufaktorové autentizaci.</p>
+<h2 id="šifrování">
+  Šifrování
+  <a class="anchor" href="#%c5%a1ifrov%c3%a1n%c3%ad">#</a>
+</h2>
+<p>nezabezpečená elektronická data se převádí za pomoci kryptografie na data šifrovaná, čitelná pouze pro majitele dešifrovacího klíče</p>
+<h3 id="typy-šifer">
+  Typy šifer
+  <a class="anchor" href="#typy-%c5%a1ifer">#</a>
+</h3>
+<ul>
+<li><strong>symetrické</strong>: používá k šifrování i dešifrování stejný klíč. Výhodou je jejich nízká výpočetní náročnost. Nevýhodou je nutnost sdílení tajného klíče, takže se odesílate a příjemce tajné zprávy musí předem domluvit na tajném klíči
+<ul>
+<li>blokové</li>
+<li>proudové</li>
+</ul>
+</li>
+<li><strong>asymetrické</strong>: K šifrování a dešifrování se používají odlišné klíče – veřejný a soukromý klíč. Klíč určený k šifrování je veřejný, majitel klíče ho volně uveřejní, a kdokoli jím může šifrovat jemu určené zprávy. Dešifrovací klíč je privátní (soukromý), majitel jej drží v tajnosti a pomocí něj může tyto zprávy dešifrovat</li>
+</ul>
+<h2 id="digitální-podpis">
+  Digitální podpis
+  <a class="anchor" href="#digit%c3%a1ln%c3%ad-podpis">#</a>
+</h2>
+<p>Digitální podpis se používá pro ověření pravosti digitálního obsahu (např. PDF, Word či jiná textová/binární data). Validní podpis dává příjemci jistotu, že přijímaný soubor nebyl od jeho odeslání změněn a že byl podepsán pouze osobou, která vlastní privátní klíč k certifikátu.</p>
+<h3 id="proces-vzniku-podpisu">
+  Proces vzniku podpisu
+  <a class="anchor" href="#proces-vzniku-podpisu">#</a>
+</h3>
+<p>Vezme se konkrétní soubor (jeden). Ze souboru se vypočítá hash pomocí hashovací funkce. Tento hash je dále zašifrován pomocí privátního klíče podepisujícího. Výsledek šifrování spolu s certifikátem tvoří tzv. “podpis”. Podpis může být připojen přímo k souboru (formát a cílová strana to musí podporovat) nebo může vzniknout jako samostatný soubor, který je předáván spolu s originálním souborem.</p>
+<h3 id="ověření-podpisu">
+  Ověření podpisu
+  <a class="anchor" href="#ov%c4%9b%c5%99en%c3%ad-podpisu">#</a>
+</h3>
+<p>Podpis souboru se dešifruje za pomoci veřejného klíče. Následně dojde k porovnání výše zmíněných 2 částí. Rovnají-li se, je podpis platný. V opačném případě byl soubor pravděpodobně neoprávněně změněn.</p>
+<h3 id="bezpečnost-podpisu">
+  Bezpečnost podpisu
+  <a class="anchor" href="#bezpe%c4%8dnost-podpisu">#</a>
+</h3>
+<p>Je důležité podotknout, že podpis nešifruje předávaný obsah. Ten je i nadále čitelný případnému útočníkovi. Dále také není žádný problém podpis odstranit (buďto smazáním samostatného souboru, nebo odstraněním podpisu přímo ze souboru). Útočník tedy může soubor vzít, podpis odstranit a upravit předávaný obsah. Pro příjemce souboru by takto upravený soubor vypadal jakože nikdy nebyl podepsán a je na jeho úsudku, zda-li bude souboru důvěřovat. (Pochopitelně pokud jsou obě strany domluveny, že všechny zprávy/soubory budou podepisovány, je to podezřelé).</p>
+<h3 id="použití-podpisu">
+  Použití podpisu
+  <a class="anchor" href="#pou%c5%beit%c3%ad-podpisu">#</a>
+</h3>
+<ul>
+<li>autentizace</li>
+<li>zajištění integrity předávaných dat</li>
+<li>neodvolatelnost</li>
+</ul>
 </article>
  
       
@@ -362,7 +443,23 @@ https://github.com/alex-shpak/hugo-book
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#šifrování">Šifrování</a>
+      <ul>
+        <li><a href="#typy-šifer">Typy šifer</a></li>
+      </ul>
+    </li>
+    <li><a href="#digitální-podpis">Digitální podpis</a>
+      <ul>
+        <li><a href="#proces-vzniku-podpisu">Proces vzniku podpisu</a></li>
+        <li><a href="#ověření-podpisu">Ověření podpisu</a></li>
+        <li><a href="#bezpečnost-podpisu">Bezpečnost podpisu</a></li>
+        <li><a href="#použití-podpisu">Použití podpisu</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
  

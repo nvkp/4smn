@@ -43,7 +43,9 @@ Fyzická bezpečnost je primárně zaměřená na ochranu technických aktiv dan
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://nvkp.github.io/4smn/docs/otazky/otazka4/</guid>
-      <description>Logická bezpečnost #  řízení přístupů — autorizace, autentizace, šifrování — principy vybrané algoritmy, elektronický podpis</description>
+      <description>Logická bezpečnost #  řízení přístupů — autorizace, autentizace, šifrování — principy vybrané algoritmy, elektronický podpis
+Při řízení přístupu je ověřována úroveň oprávnění a práv uživatele (Autorizace) k určitému zdroji nebo objektu. Zdrojem může být připojení k síti, využití kapacity paměťového média, přístup k počítačovým systémům (serverům, síťovým prvkům, tiskárnám aj.) atd., zatímco objektem jsou například data uložená v určitém adresáři, nebo samostatný soubor.
+Ověřovaným objektem může být oprávnění uživatele, skupiny, ale i samotných počítačových systémů.</description>
     </item>
     
     <item>
