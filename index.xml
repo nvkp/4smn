@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>4SMN Security Management</title>
-    <link>https://nvkp.github.io/4smn/</link>
+    <link>http://nvkp.github.io/4smn/</link>
     <description>Recent content on 4SMN Security Management</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>cs-CZ</language><atom:link href="https://nvkp.github.io/4smn/index.xml" rel="self" type="application/rss+xml" />
+    <language>cs-CZ</language><atom:link href="http://nvkp.github.io/4smn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Otázka 1</title>
-      <link>https://nvkp.github.io/4smn/docs/otazky/otazka1/</link>
+      <link>http://nvkp.github.io/4smn/docs/otazky/otazka1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://nvkp.github.io/4smn/docs/otazky/otazka1/</guid>
+      <guid>http://nvkp.github.io/4smn/docs/otazky/otazka1/</guid>
       <description>otázka 1</description>
     </item>
     
     <item>
       <title>Otázka 2</title>
-      <link>https://nvkp.github.io/4smn/docs/otazky/otazka2/</link>
+      <link>http://nvkp.github.io/4smn/docs/otazky/otazka2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://nvkp.github.io/4smn/docs/otazky/otazka2/</guid>
+      <guid>http://nvkp.github.io/4smn/docs/otazky/otazka2/</guid>
       <description>otázka 2</description>
     </item>
     
