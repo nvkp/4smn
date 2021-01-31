@@ -21,7 +21,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://nvkp.github.io/4smn/docs/otazky/otazka2/</guid>
-      <description>Řízení rizik informačního systému organizace #  </description>
+      <description>Řízení rizik informačního systému organizace #  Hrozba #  něco, co je schopno narušit běžný či řádný stav věcí a zasáhnout do práv jiných subjektů
+Definice z dikce Ministerstva vnitra ČR: jakýkoli fenomén, který má potenciální schopnost poškodit zájmy a hodnoty chráněné státem
+Definice z výkladového slovníku kybernetické bezpečnosti: potenciální příčina nechtěného incidentu, jehož výsledkem může být poškození systému nebo organizace
+Aktivum #  cokoliv, co má určitou hodnotu pro osobu, organizaci či stát</description>
     </item>
     
     <item>
@@ -30,7 +33,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://nvkp.github.io/4smn/docs/otazky/otazka3/</guid>
-      <description>Fyzická bezpečnost #  postupy a metodika zajištění, ukázky z projektu</description>
+      <description>Fyzická bezpečnost #  postupy a metodika zajištění, ukázky z projektu
+Fyzická bezpečnost je primárně zaměřená na ochranu technických aktiv daného subjektu. Cílem těchto opatření je především zamezení přístupu nepovolaných osob k jednotlivým prvkům infrastruktury, do serveroven, pracovišť správců systému apod. Snahou je vyloučit zcizení majetku přímo i nepřímo souvisejícího s informačním systémem, případně zamezit poškození hmotného i nehmotného vybavení nebo vybavení prostor. V neposlední řadě se snaží zamezit úniku informací a dat.</description>
     </item>
     
     <item>
@@ -95,9 +99,7 @@ Data mohou být sbírána z webových serverů, routerů, firewallů, Active Dir
       
       <guid>http://nvkp.github.io/4smn/docs/otazky/otazka10/</guid>
       <description>Penetrační testování #  Penetrační testy: ověření bezpečnosti IS za pomoci nástrojů a postupu používaných skutečnými útočníky
-Způsoby ověření bezpečnosti
- Assessment (org. pohledy, politiky, procedury): zkoumání dokumentace a uživatelů Evaluation (systémová, síťová úroveň identifikace bezpečnostních slabin, validace implementace, dokumentace): firewall, konfigurace.. Blue and red team(reálné pokusy o průniky = penetrační testy): simulace reálného útoku  Důvody provedení penetračního testu
- compliance ověření bezpečnosti v rámci vývoje/akceptace ověření bezpečnosti již běžícího systému ověření úrovně incident response ověření odolnosti zaměstnanců proti sociálnímu inženýrství  Typy penetračních testů</description>
+Způsoby ověření bezpečnosti #   Assessment (org. pohledy, politiky, procedury): zkoumání dokumentace a uživatelů Evaluation (systémová, síťová úroveň identifikace bezpečnostních slabin, validace implementace, dokumentace): firewall, konfigurace.. Blue and red team(reálné pokusy o průniky = penetrační testy): simulace reálného útoku  Důvody provedení penetračního testu #   compliance ověření bezpečnosti v rámci vývoje/akceptace ověření bezpečnosti již běžícího systému ověření úrovně incident response ověření odolnosti zaměstnanců proti sociálnímu inženýrství  Typy penetračních testů #   Interní (z organizace ale i z domova přes vpn) vs.</description>
     </item>
     
     <item>
@@ -106,7 +108,8 @@ Způsoby ověření bezpečnosti
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://nvkp.github.io/4smn/docs/otazky/otazka11/</guid>
-      <description>Digitální forenzní analýza #  </description>
+      <description>Digitální forenzní analýza #  exaktní věda, která zkoumá procesy a zákonitosti vzniku, existence a zániku digitální informace a interpretuje tyto poznatky na objasňování dějů a procesů s tím souvisejících
+Podmínky FA #   nepodjatost legalita integrita opakovatelnost / přezkoumatelnost  Pojmy #   Digitální stopa Originál digitální stopy Obraz digitální stopy Kopie obrazu digitální stopy Zajištění digitální stopy Forenzní nástroj  Aplikace DFA #   Znalecké zkoumání Řízení / zvládání bezpečnostních incidentů  Druhy digitálních stop #   Best evidence: originální zařízení Binární kopie: obraz disku Kopie obrazu disku: kopie binární kopie  Proces DFA #   identifikace potenciálních zdrojů důkazů zajištění dat přezkoumání dat: dá se jim struktura analýza dat prezentace dosažených poznatků  </description>
     </item>
     
   </channel>

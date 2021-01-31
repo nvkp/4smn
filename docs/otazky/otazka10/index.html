@@ -6,14 +6,10 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Penetrační testování #  Penetrační testy: ověření bezpečnosti IS za pomoci nástrojů a postupu používaných skutečnými útočníky
-Způsoby ověření bezpečnosti
- Assessment (org. pohledy, politiky, procedury): zkoumání dokumentace a uživatelů Evaluation (systémová, síťová úroveň identifikace bezpečnostních slabin, validace implementace, dokumentace): firewall, konfigurace.. Blue and red team(reálné pokusy o průniky = penetrační testy): simulace reálného útoku  Důvody provedení penetračního testu
- compliance ověření bezpečnosti v rámci vývoje/akceptace ověření bezpečnosti již běžícího systému ověření úrovně incident response ověření odolnosti zaměstnanců proti sociálnímu inženýrství  Typy penetračních testů">
+Způsoby ověření bezpečnosti #   Assessment (org. pohledy, politiky, procedury): zkoumání dokumentace a uživatelů Evaluation (systémová, síťová úroveň identifikace bezpečnostních slabin, validace implementace, dokumentace): firewall, konfigurace.. Blue and red team(reálné pokusy o průniky = penetrační testy): simulace reálného útoku  Důvody provedení penetračního testu #   compliance ověření bezpečnosti v rámci vývoje/akceptace ověření bezpečnosti již běžícího systému ověření úrovně incident response ověření odolnosti zaměstnanců proti sociálnímu inženýrství  Typy penetračních testů #   Interní (z organizace ale i z domova přes vpn) vs.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Penetrační testování" />
 <meta property="og:description" content="Penetrační testování #  Penetrační testy: ověření bezpečnosti IS za pomoci nástrojů a postupu používaných skutečnými útočníky
-Způsoby ověření bezpečnosti
- Assessment (org. pohledy, politiky, procedury): zkoumání dokumentace a uživatelů Evaluation (systémová, síťová úroveň identifikace bezpečnostních slabin, validace implementace, dokumentace): firewall, konfigurace.. Blue and red team(reálné pokusy o průniky = penetrační testy): simulace reálného útoku  Důvody provedení penetračního testu
- compliance ověření bezpečnosti v rámci vývoje/akceptace ověření bezpečnosti již běžícího systému ověření úrovně incident response ověření odolnosti zaměstnanců proti sociálnímu inženýrství  Typy penetračních testů" />
+Způsoby ověření bezpečnosti #   Assessment (org. pohledy, politiky, procedury): zkoumání dokumentace a uživatelů Evaluation (systémová, síťová úroveň identifikace bezpečnostních slabin, validace implementace, dokumentace): firewall, konfigurace.. Blue and red team(reálné pokusy o průniky = penetrační testy): simulace reálného útoku  Důvody provedení penetračního testu #   compliance ověření bezpečnosti v rámci vývoje/akceptace ověření bezpečnosti již běžícího systému ověření úrovně incident response ověření odolnosti zaměstnanců proti sociálnímu inženýrství  Typy penetračních testů #   Interní (z organizace ale i z domova přes vpn) vs." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://nvkp.github.io/4smn/docs/otazky/otazka10/" />
 
@@ -21,7 +17,7 @@ Způsoby ověření bezpečnosti
 <link rel="manifest" href="/4smn/manifest.json">
 <link rel="icon" href="/4smn/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/4smn/book.min.6c7c6446dfdee7c8c933e9bbc6e80ee3ed6c913b2a59519f2092c3c6a9d63e55.css" integrity="sha256-bHxkRt/e58jJM&#43;m7xugO4&#43;1skTsqWVGfIJLDxqnWPlU=">
-<script defer src="/4smn/en.search.min.5a86144598ea252bbe41f4ca45f68421eb1be001db7f4c1d8d2dab547231390b.js" integrity="sha256-WoYURZjqJSu&#43;QfTKRfaEIesb4AHbf0wdjS2rVHIxOQs="></script>
+<script defer src="/4smn/en.search.min.8087d412f2fecbdea2d711cc0ef4948ce400d11b843a2fb7c77de490e1a9948e.js" integrity="sha256-gIfUEvL&#43;y96i1xHMDvSUjOQA0RuEOi&#43;3x33kkOGplI4="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -318,7 +314,16 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#způsoby-ověření-bezpečnosti">Způsoby ověření bezpečnosti</a></li>
+    <li><a href="#důvody-provedení-penetračního-testu">Důvody provedení penetračního testu</a></li>
+    <li><a href="#typy-penetračních-testů">Typy penetračních testů</a></li>
+    <li><a href="#metodický-postup-dle-issaf">Metodický postup dle ISSAF</a></li>
+    <li><a href="#dokumentace-kolem-pentestů">Dokumentace kolem pentestů</a></li>
+    <li><a href="#metodiky">Metodiky</a></li>
+  </ul>
+</nav>
 
 
 
@@ -334,13 +339,19 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#penetra%c4%8dn%c3%ad-testov%c3%a1n%c3%ad">#</a>
 </h1>
 <p><strong>Penetrační testy:</strong> ověření bezpečnosti IS za pomoci nástrojů a postupu používaných skutečnými útočníky</p>
-<p><strong>Způsoby ověření bezpečnosti</strong></p>
+<h2 id="způsoby-ověření-bezpečnosti">
+  Způsoby ověření bezpečnosti
+  <a class="anchor" href="#zp%c5%afsoby-ov%c4%9b%c5%99en%c3%ad-bezpe%c4%8dnosti">#</a>
+</h2>
 <ol>
 <li><strong>Assessment</strong> (org. pohledy, politiky, procedury): zkoumání dokumentace a uživatelů</li>
 <li><strong>Evaluation</strong> (systémová, síťová úroveň identifikace bezpečnostních slabin, validace implementace, dokumentace): firewall, konfigurace..</li>
 <li><strong>Blue and red team</strong>(reálné pokusy o průniky = penetrační testy): simulace reálného útoku</li>
 </ol>
-<p><strong>Důvody provedení penetračního testu</strong></p>
+<h2 id="důvody-provedení-penetračního-testu">
+  Důvody provedení penetračního testu
+  <a class="anchor" href="#d%c5%afvody-proveden%c3%ad-penetra%c4%8dn%c3%adho-testu">#</a>
+</h2>
 <ul>
 <li>compliance</li>
 <li>ověření bezpečnosti v rámci vývoje/akceptace</li>
@@ -348,7 +359,10 @@ https://github.com/alex-shpak/hugo-book
 <li>ověření úrovně incident response</li>
 <li>ověření odolnosti zaměstnanců proti sociálnímu inženýrství</li>
 </ul>
-<p><strong>Typy penetračních testů</strong></p>
+<h2 id="typy-penetračních-testů">
+  Typy penetračních testů
+  <a class="anchor" href="#typy-penetra%c4%8dn%c3%adch-test%c5%af">#</a>
+</h2>
 <ul>
 <li><strong>Interní</strong> (z organizace ale i z domova přes vpn) vs. <strong>externí</strong> (přístup jako klient atd)</li>
 <li><strong>Black box</strong> (tester neví o IS nic) vs. <strong>White box</strong> (tester má všechny informace)</li>
@@ -357,9 +371,13 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>externí firmou</strong> vs. <strong>vlastními silami</strong></li>
 <li><strong>kompletní</strong> vs. <strong>omezený</strong></li>
 </ul>
-<p><strong>Metodický postup dle ISSAF (Information Systems Security Assessment Framework)</strong></p>
+<h2 id="metodický-postup-dle-issaf">
+  Metodický postup dle ISSAF
+  <a class="anchor" href="#metodick%c3%bd-postup-dle-issaf">#</a>
+</h2>
+<p><strong>ISSAF</strong>: Information Systems Security Assessment Framework</p>
 <ol>
-<li>Pre assessment (planning and preparation)
+<li><strong>Pre assessment</strong> (planning and preparation)
 <ul>
 <li>requirements identification</li>
 <li>stakeholder identification</li>
@@ -368,7 +386,7 @@ https://github.com/alex-shpak/hugo-book
 <li>defining rules</li>
 </ul>
 </li>
-<li>Assessment
+<li><strong>Assessment</strong>
 <ul>
 <li>information gathering</li>
 <li>network mapping</li>
@@ -381,7 +399,7 @@ https://github.com/alex-shpak/hugo-book
 <li>covering tracks</li>
 </ul>
 </li>
-<li>Post assessment
+<li><strong>Post assessment</strong>
 <ul>
 <li>cleanup</li>
 <li>document analysis</li>
@@ -391,7 +409,10 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ol>
-<p><strong>Dokumentace kolem pentestů</strong></p>
+<h2 id="dokumentace-kolem-pentestů">
+  Dokumentace kolem pentestů
+  <a class="anchor" href="#dokumentace-kolem-pentest%c5%af">#</a>
+</h2>
 <ul>
 <li>NDA (non-disclosure agreement): smlouva o mlčenlivosti</li>
 <li>Request for Information (RFI): zjištění, jestli je to dodavatel schopný udělat</li>
@@ -402,7 +423,10 @@ https://github.com/alex-shpak/hugo-book
 <li>Final Report</li>
 <li>Lessons Learned</li>
 </ul>
-<p><strong>Metodiky:</strong></p>
+<h2 id="metodiky">
+  Metodiky
+  <a class="anchor" href="#metodiky">#</a>
+</h2>
 <ul>
 <li>OSSTM: obecný rámec nejen pro pentesty</li>
 <li>Technical Guide to Information Security Testing and Assessment (NIST SP 800-115)</li>
@@ -443,7 +467,16 @@ https://github.com/alex-shpak/hugo-book
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#způsoby-ověření-bezpečnosti">Způsoby ověření bezpečnosti</a></li>
+    <li><a href="#důvody-provedení-penetračního-testu">Důvody provedení penetračního testu</a></li>
+    <li><a href="#typy-penetračních-testů">Typy penetračních testů</a></li>
+    <li><a href="#metodický-postup-dle-issaf">Metodický postup dle ISSAF</a></li>
+    <li><a href="#dokumentace-kolem-pentestů">Dokumentace kolem pentestů</a></li>
+    <li><a href="#metodiky">Metodiky</a></li>
+  </ul>
+</nav>
 
 
  
