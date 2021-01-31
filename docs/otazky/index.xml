@@ -84,7 +84,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://nvkp.github.io/4smn/docs/otazky/otazka9/</guid>
-      <description>SIEM #  </description>
+      <description>SIEM #  SIEM umožňuje monitorování, ukládání, agregaci, korelaci bezpečnostních informací a z nich plynoucích incidentů a jejich zobrazování, reportování a vydávání varování. SIEM technologie sbírá v reálném čase informace ze síťových počítačových systémů, aplikací, systémových logů, jejichž vyhodnocení umožňuje identifikovat potenciální bezpečnostní hrozby.
+Data mohou být sbírána z webových serverů, routerů, firewallů, Active Directory serverů, databázových serverů a tyto informace mohou být dále doplněny o informace dávající těmto datům kontext, jako jsou informace o uživatelích, výsledcích bezpečnostních skenů, informace z externích zdrojů a informace o běžných návycích uživatelů.</description>
     </item>
     
     <item>
@@ -93,7 +94,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://nvkp.github.io/4smn/docs/otazky/otazka10/</guid>
-      <description>Penetrační testování #  </description>
+      <description>Penetrační testování #  Penetrační testy: ověření bezpečnosti IS za pomoci nástrojů a postupu používaných skutečnými útočníky
+Způsoby ověření bezpečnosti
+ Assessment (org. pohledy, politiky, procedury): zkoumání dokumentace a uživatelů Evaluation (systémová, síťová úroveň identifikace bezpečnostních slabin, validace implementace, dokumentace): firewall, konfigurace.. Blue and red team(reálné pokusy o průniky = penetrační testy): simulace reálného útoku  Důvody provedení penetračního testu
+ compliance ověření bezpečnosti v rámci vývoje/akceptace ověření bezpečnosti již běžícího systému ověření úrovně incident response ověření odolnosti zaměstnanců proti sociálnímu inženýrství  Typy penetračních testů</description>
     </item>
     
     <item>
