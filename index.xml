@@ -7,21 +7,102 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>cs-CZ</language><atom:link href="http://nvkp.github.io/4smn/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Otázka 1</title>
+      <title>Rámec a způsob použití standardů</title>
       <link>http://nvkp.github.io/4smn/docs/otazky/otazka1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://nvkp.github.io/4smn/docs/otazky/otazka1/</guid>
-      <description>otázka 1</description>
+      <description>Rámec a způsob použití standardů a legislativy v podmínkách organizací, certifikace MIČR #  </description>
     </item>
     
     <item>
-      <title>Otázka 2</title>
+      <title>Řízení rizik informačního systému organizace</title>
       <link>http://nvkp.github.io/4smn/docs/otazky/otazka2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://nvkp.github.io/4smn/docs/otazky/otazka2/</guid>
-      <description>otázka 2</description>
+      <description>Řízení rizik informačního systému organizace #  </description>
+    </item>
+    
+    <item>
+      <title>Fyzická bezpečnost</title>
+      <link>http://nvkp.github.io/4smn/docs/otazky/otazka3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nvkp.github.io/4smn/docs/otazky/otazka3/</guid>
+      <description>Fyzická bezpečnost #  postupy a metodika zajištění, ukázky z projektu</description>
+    </item>
+    
+    <item>
+      <title>Logická bezpečnost</title>
+      <link>http://nvkp.github.io/4smn/docs/otazky/otazka4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nvkp.github.io/4smn/docs/otazky/otazka4/</guid>
+      <description>Logická bezpečnost #  řízení přístupů — autorizace, autentizace, šifrování — principy vybrané algoritmy, elektronický podpis</description>
+    </item>
+    
+    <item>
+      <title>Administrativní bezpečnost 1</title>
+      <link>http://nvkp.github.io/4smn/docs/otazky/otazka5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nvkp.github.io/4smn/docs/otazky/otazka5/</guid>
+      <description>Administrativní bezpečnost 1 #  manažerský koncept jejího nasazení v organizaci – dokumentace, organizační struktury, odpovědnosti, pravomoci, BIA- analýzy kritických funkcí a procesů v organizaci, DRP — řízení obnovy IS po selhání nebo nehodě, BCP — řízení kontinuity procesů v organizaci</description>
+    </item>
+    
+    <item>
+      <title>Administrativní bezpečnost 2</title>
+      <link>http://nvkp.github.io/4smn/docs/otazky/otazka6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nvkp.github.io/4smn/docs/otazky/otazka6/</guid>
+      <description>Administrativní bezpečnost 2 #  řízení bezpečnostních incidentů — postupy organizační struktury, řízení bezpečnostních incidentů</description>
+    </item>
+    
+    <item>
+      <title>Audit IMS s důrazem na audit IS/ICT</title>
+      <link>http://nvkp.github.io/4smn/docs/otazky/otazka7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nvkp.github.io/4smn/docs/otazky/otazka7/</guid>
+      <description>Audit IMS s důrazem na audit IS/ICT #  techniky a postupy auditu, auditorská zpráva</description>
+    </item>
+    
+    <item>
+      <title>Audit, atestace a certifikace</title>
+      <link>http://nvkp.github.io/4smn/docs/otazky/otazka8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nvkp.github.io/4smn/docs/otazky/otazka8/</guid>
+      <description>Audit, atestace a certifikace #  Certifikační řízení, typy certifikátů, certifikační autority. Atestace na standardy ISVS, atestační postupy autority</description>
+    </item>
+    
+    <item>
+      <title>SIEM</title>
+      <link>http://nvkp.github.io/4smn/docs/otazky/otazka9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nvkp.github.io/4smn/docs/otazky/otazka9/</guid>
+      <description>SIEM #  </description>
+    </item>
+    
+    <item>
+      <title>Penetrační testování</title>
+      <link>http://nvkp.github.io/4smn/docs/otazky/otazka10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nvkp.github.io/4smn/docs/otazky/otazka10/</guid>
+      <description>Penetrační testování #  </description>
+    </item>
+    
+    <item>
+      <title>Digitální forenzní analýza</title>
+      <link>http://nvkp.github.io/4smn/docs/otazky/otazka11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://nvkp.github.io/4smn/docs/otazky/otazka11/</guid>
+      <description>Digitální forenzní analýza #  </description>
     </item>
     
   </channel>
