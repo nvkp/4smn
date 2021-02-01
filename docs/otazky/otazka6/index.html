@@ -19,7 +19,7 @@ identifikovatelný stav systému, služby, nebo sítě, ukazující na možné p
 <link rel="manifest" href="/4smn/manifest.json">
 <link rel="icon" href="/4smn/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/4smn/book.min.44110be292c9f873dbe57bd8895d52b387519bad9a89a86ed5c3705e11d6b0d5.css" integrity="sha256-RBEL4pLJ&#43;HPb5XvYiV1Ss4dRm62aiahu1cNwXhHWsNU=">
-<script defer src="/4smn/en.search.min.7837cd8fa66e3c96fb0d6cb6db6b37e9f7f45d77c8ed888721fd5c885c2e02eb.js" integrity="sha256-eDfNj6ZuPJb7DWy222s36ff0XXfI7YiHIf1ciFwuAus="></script>
+<script defer src="/4smn/en.search.min.26d323b4564b6302f5e1bc9af3d2b70c876c5fa1158d6275d46204e3f1d8df02.js" integrity="sha256-JtMjtFZLYwL14bya89K3DIdsX6EVjWJ11GIE4/HY3wI="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -332,7 +332,14 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#information-security-incident-lifecycle">Information Security Incident LIfecycle</a></li>
       </ul>
     </li>
-    <li><a href="#todo-organizační-struktury">TODO organizační struktury</a></li>
+    <li><a href="#organizační-struktury">Organizační struktury</a>
+      <ul>
+        <li><a href="#služby-vládního-certu">Služby Vládního CERTU</a></li>
+        <li><a href="#csirt">CSIRT</a></li>
+        <li><a href="#isirt">ISIRT</a></li>
+        <li><a href="#síť-csirt">Síť CSIRT</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -464,10 +471,59 @@ zjištěná data předat profesionálním pracovníkům z týmu řešení bezpe�
 <li>Containment &amp; Eradication &amp; Recovery</li>
 <li>Post-Incident Activity</li>
 </ul>
-<h2 id="todo-organizační-struktury">
-  TODO organizační struktury
-  <a class="anchor" href="#todo-organiza%c4%8dn%c3%ad-struktury">#</a>
+<h2 id="organizační-struktury">
+  Organizační struktury
+  <a class="anchor" href="#organiza%c4%8dn%c3%ad-struktury">#</a>
 </h2>
+<p>Bezpečnostní týmy typu CERT (Computer Emergency Response Team) nebo CSIRT (Computer Security Incident Response Team) odpovídají za agendu sou­visející s řešením bezpečnostních incidentů v rámci státu, odvětví, komunity, or­ganizace či sítě. Jejich agenda je velmi široká a zahrnuje množství úkolů od pre­vence a zvyšování povědomí, detekci, sledování a řešení incidentů, až po vy­hod­nocování zkušeností. Bezpečnostní týmy vznikají zejména za účelem zajištění efektivní reakce na kybernetické bezpečnostní incidenty.</p>
+<p>U těchto bezpečnostních týmů je klíčové zejména jejich zapojení do světové bez­pečnostní komunity a infrastruktury bezpečnostních týmů, sdílení informací s ko­munitou a stanovení formálních postupů. Bezpečnostní tým zpravidla musí ve­řejně deklarovat své kontaktní informace a pravidla činnosti – kdo jsou jeho čle­nové, způsob jak a kdy je možné tým zastihnout, jaké služby nabízí a zejména pak definovat své pravomoci a odpovědnost (např. v oblasti sítí, ICS/SCADA apod.). Na základě jeho pole působnosti je tým kontaktován (např. napadenými subjekty), které podporuje při řešení jejich kybernetických bezpečnostních inci­dentů.</p>
+<p>Kategorie týmů:</p>
+<ul>
+<li><strong>interní</strong>: Např. bezpečnostní tým konkrétní organizace. Při řešení incidentů má možnost přímého zásahu (např. odpo­jení zdroje problému, rekonfigurace filtrací síťového provozu, na­sazení no­vého bezpečnostního opatření).</li>
+<li><strong>koordinační</strong>: Např. národní bezpečnostní tým nebo bezpečnostní tým určité komu­nity nebo odvětví. Jeho působnost je často vymezena zá­kony nebo pra­vidly komunit/odvětví. Při řešení incidentů nemá možnost přímého zásahu. Soustřeďuje se na komunikaci, spolupráci a zprostředkování informací.</li>
+</ul>
+<p>Z pohledu kybernetického zákona mají v České republice zákonnou oporu dva bezpečnostní týmy – Vládní CERT a Národní CERT. Vládní CERT je provozován ze strany NÚKIB, jakožto gestorem kybernetické bezpečnosti (v praxi se můžeme setkat s názvem GovCERT.CZ). Národní CERT (CSIRT.CZ) je provozován sdru­žením CZ.NIC podle veřejnoprávní smlouvy uzavřené s NÚKIB.</p>
+<h3 id="služby-vládního-certu">
+  Služby Vládního CERTU
+  <a class="anchor" href="#slu%c5%beby-vl%c3%a1dn%c3%adho-certu">#</a>
+</h3>
+<ul>
+<li>proaktivní
+<ul>
+<li>penetrační testování</li>
+<li>kybernetická cvičení</li>
+<li>včasné varování</li>
+<li>bezpečnostní doporučení</li>
+<li>zvyšování bezpečnostního povědomí</li>
+<li>Zprostředkování kontaktů napříč různými institucemi za účelem zvyšování bezpečnosti</li>
+<li>Sdílení a analýza dat o zranitelnostech, hrozbách, infikovaných IP adresách apod.</li>
+</ul>
+</li>
+<li>reaktivní
+<ul>
+<li>koordinace</li>
+<li>technická podpora</li>
+<li>analýza malware</li>
+</ul>
+</li>
+</ul>
+<h3 id="csirt">
+  CSIRT
+  <a class="anchor" href="#csirt">#</a>
+</h3>
+<p><strong>Computer Secu­rity Incident Response Team</strong>: Skupina pro reakce na počítačové bezpečnostní incidenty: Tým odborníků na informační bezpeč­nost, jejichž úkolem je řešit bezpečnostní incidenty. CSIRT poskytuje svým klientům po­třebné služby při řešení bezpečnostních incidentů a pomáhá jim při obnově systému po bezpečnostním incidentu.</p>
+<p>Aby snížila rizika incidentů a mini­malizovala jejich počet, pracoviště CSIRT poskytují svým klientům také preven­tivní a vzdě­lá­vací služby. Pro své klienty poskytují informace o odhalených slabinách používa­ných hardwarových a softwarových prostředků a o možných útocích, které těchto slabin využívají, aby klienti mohli dostatečně rychle ošetřit odhalené slabiny.</p>
+<h3 id="isirt">
+  ISIRT
+  <a class="anchor" href="#isirt">#</a>
+</h3>
+<p><strong>interní tým řešení bezpečnostních incidentů</strong>. Jedná se o organizační struk­turu, která se využívá výhradně pro potřeby řešení incidentů. Jeho členy se stá­vají zku­šení a důvěryhodní pracovníci organizace, kteří mají zkušenosti s řešením tako­vých situací. Ti se věnují řešení incidentů po celý jeho životní cyklus až do závě­rečné etapy vyhodnocení a zobecnění jeho závěrů a výsledků do celkové koncepce ISMS. V některých případech je tento tým posilován o ex­terní specialisty.</p>
+<p>Pro praktické řešení je možné doporučit za vedoucího týmu osobu z vr­cholového vedení organizace. Kromě něj by se měli na práci týmu po­dílet bezpeč­nostní manažeři různých dotčených úrovní a podle charakteru inci­dentu odborníci na problém a případně i liniový manažer pracoviště, kde inci­dent vznikl. Tým ře­šení bezpečnostních incidentů má svoje trvalé členy a členy, kteří jsou do něj jme­nováni pro řešení určitých konkrétních incidentů.</p>
+<h3 id="síť-csirt">
+  Síť CSIRT
+  <a class="anchor" href="#s%c3%ad%c5%a5-csirt">#</a>
+</h3>
+<p>Směrnice ji definuje jako skupinu CSIRT/CERT týmů členských států a týmu CERT-EU. Primárním úkolem této skupiny je zajišťovat výměnu informací, osvědčených postupů a pod­poru při ře­šení incidentů na úrovni Evropské unie. – makro pohled na kybernetickou bezpečnost.</p>
 </article>
  
       
@@ -518,7 +574,14 @@ zjištěná data předat profesionálním pracovníkům z týmu řešení bezpe�
         <li><a href="#information-security-incident-lifecycle">Information Security Incident LIfecycle</a></li>
       </ul>
     </li>
-    <li><a href="#todo-organizační-struktury">TODO organizační struktury</a></li>
+    <li><a href="#organizační-struktury">Organizační struktury</a>
+      <ul>
+        <li><a href="#služby-vládního-certu">Služby Vládního CERTU</a></li>
+        <li><a href="#csirt">CSIRT</a></li>
+        <li><a href="#isirt">ISIRT</a></li>
+        <li><a href="#síť-csirt">Síť CSIRT</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
