@@ -17,7 +17,7 @@ Data mohou být sbírána z webových serverů, routerů, firewallů, Active Dir
 <link rel="manifest" href="/4smn/manifest.json">
 <link rel="icon" href="/4smn/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/4smn/book.min.44110be292c9f873dbe57bd8895d52b387519bad9a89a86ed5c3705e11d6b0d5.css" integrity="sha256-RBEL4pLJ&#43;HPb5XvYiV1Ss4dRm62aiahu1cNwXhHWsNU=">
-<script defer src="/4smn/en.search.min.7f0005397dc8324bd758ed67659e74a1b753b42409212a38b328509a2f2dcf92.js" integrity="sha256-fwAFOX3IMkvXWO1nZZ50obdTtCQJISo4syhQmi8tz5I="></script>
+<script defer src="/4smn/en.search.min.69e740c4a5c8651164fee56e99862c5ed70e096c96eb1509c909cbf58f74f37a.js" integrity="sha256-aedAxKXIZRFk/uVumYYsXtcOCWyW6xUJyQnL9Y9083o="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -314,7 +314,23 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#jaké-události-zaznamenávat-a-monitorovat">Jaké události zaznamenávat a monitorovat</a></li>
+    <li><a href="#příklady-korelací">Příklady korelací</a></li>
+    <li><a href="#výhody-siem">Výhody SIEM</a></li>
+    <li><a href="#nejčastější-chyby-při-používání">Nejčastější chyby při používání</a></li>
+    <li><a href="#dmz">DMZ</a></li>
+    <li><a href="#firewall">Firewall</a>
+      <ul>
+        <li><a href="#nevýhody">Nevýhody</a></li>
+      </ul>
+    </li>
+    <li><a href="#ids">IDS</a></li>
+    <li><a href="#ips">IPS</a></li>
+    <li><a href="#zapojení-ips-a-ids">Zapojení IPS a IDS</a></li>
+  </ul>
+</nav>
 
 
 
@@ -334,6 +350,98 @@ https://github.com/alex-shpak/hugo-book
 datům kontext, jako jsou informace o uživatelích, výsledcích bezpečnostních skenů, informace z externích zdrojů a informace o běžných návycích uživatelů. Získané informace jsou následně agregovány, korelovány a je nad nimi prováděna analýza, která má ukázat na možné bezpečnostní problémy.</p>
 <p>Je však třeba říci, že SIEM řešení není vhodné pro každou situaci. Zatímco firewall nebo antispam mají smysl v podstatě v každé organizaci, SIEM představuje robustní řešení, které vyžaduje poměrně dost zdrojů.</p>
 <p>Kromě samotné implementace je třeba počítat také v podstatě s každodenní údržbou, přičemž čím složitější je prostředí, tím větší jsou nároky na údržbu. Stačí totiž poměrně malá změna v části počítačové sítě či počítačovém systému a již nakonfigurovaný SIEM může začít generovat řadu false positive hlášení. Rozhodnutí, zda SIEM využít, záleží na velikosti organizace, hodnotě chráněných aktiv i na náročnosti implementace a údržbě SIEM řešení.</p>
+<h2 id="jaké-události-zaznamenávat-a-monitorovat">
+  Jaké události zaznamenávat a monitorovat
+  <a class="anchor" href="#jak%c3%a9-ud%c3%a1losti-zaznamen%c3%a1vat-a-monitorovat">#</a>
+</h2>
+<ul>
+<li>nestandardní pokusy o přihlášení (AD, servery, DB, aplikační vrstva, atd.)</li>
+<li>činnosti provedené administrátory (např. změna konfigurace, dotazy nad DB, aj.),</li>
+<li>manipulace s účty, oprávněními a právy (např. přidělení privilegovaného oprávnění),</li>
+<li>neprovedení činností v důsledku nedostatku přístupových práv a oprávnění (např. pokus o neoprávněný zápis do DB),</li>
+<li>činností uživatelů, které mohou mít vliv na bezpečnost informačního a komunikačního systému (např. vypnutí AV),</li>
+<li>zahájení a ukončení činností technických aktiv (např. kontrolu spouštění automatických jobů, skenů, apod.),</li>
+<li>kritických i chybových hlášení technických aktiv (např. alerty z IDS),</li>
+<li>přístupy k záznamům o událostech, pokusy o manipulaci se záznamy o událostech a změny nastavení nástrojů pro zaznamenávání událostí.</li>
+</ul>
+<h2 id="příklady-korelací">
+  Příklady korelací
+  <a class="anchor" href="#p%c5%99%c3%adklady-korelac%c3%ad">#</a>
+</h2>
+<ul>
+<li>Upozorni, pokud je navázáno více než 100 spojení z různých externích IP adres k jediné IP adrese během 1 minuty.</li>
+<li>Upozorni, pokud se jeden a ten samý uživatel pokoušel přihlásit více než 3 krát k jednomu zařízení během 1 hodiny a jeho pokus byl vždy neúspěšný.</li>
+<li>Upozorni, pokud předtím blokovaná IP adresa byla povolena.</li>
+<li>Upozorni, pokud byl v Active Directory vytvořen a smazán uživatelský účet během 1 hodiny.</li>
+<li>Upozorni, pokud byl vytvořen nový superuser.</li>
+<li>Upozorni, pokud bude z produkční databáze kopírován větší objem dat.</li>
+<li>Upozorni, pokud se admin přihlásí vzdáleně přes VPN.</li>
+<li>Upozorni, pokud se objeví SQL injection útok na webovém serveru.</li>
+</ul>
+<h2 id="výhody-siem">
+  Výhody SIEM
+  <a class="anchor" href="#v%c3%bdhody-siem">#</a>
+</h2>
+<ul>
+<li>mohu detekovat podezřelé aktivity běžných uživatelů a administrátorů <strong>v reálném čase</strong></li>
+<li>mohu identifikovat případné útoky zvenčí</li>
+<li>na SIEM mohu napojit další detekční nástroje a SIEM se tak stane centralizovaným místem pro sběr dat o bezp. událostech (např. Vulnerability Scanner, AV, Flow Monitoring, atd.)</li>
+</ul>
+<h2 id="nejčastější-chyby-při-používání">
+  Nejčastější chyby při používání
+  <a class="anchor" href="#nej%c4%8dast%c4%9bj%c5%a1%c3%ad-chyby-p%c5%99i-pou%c5%be%c3%adv%c3%a1n%c3%ad">#</a>
+</h2>
+<ul>
+<li>zcela náhodné napojování jednotlivých aktiv</li>
+<li>přejímání pouze obecných korelačních pravidel pro specifické aplikace</li>
+<li>nevyškolený personál</li>
+<li>špatná interpretace nálezů</li>
+</ul>
+<h2 id="dmz">
+  DMZ
+  <a class="anchor" href="#dmz">#</a>
+</h2>
+<p>podsíť logicky oddělená od ostatních sítí a zařízení; v síti bývají často umístěny služby, které vyžadují přístup k Internetu (e-mail, webové aplikace)</p>
+<h2 id="firewall">
+  Firewall
+  <a class="anchor" href="#firewall">#</a>
+</h2>
+<ul>
+<li>slouží k filtrování provozu mezi sítěmi s různou úrovní důvěryhodnosti a zabezpečení (chrání zařízení ve vnitřní síti před škodlivou příchozí komunikací a může blokovat nechtěnou odchozí komunikaci)</li>
+<li>provoz je řízen na základě předdefinovaných politik či dynamických pravidel</li>
+</ul>
+<h3 id="nevýhody">
+  Nevýhody
+  <a class="anchor" href="#nev%c3%bdhody">#</a>
+</h3>
+<ul>
+<li>blokuje provoz pouze na základě definovaných IP adres a portů</li>
+</ul>
+<h2 id="ids">
+  IDS
+  <a class="anchor" href="#ids">#</a>
+</h2>
+<p>Intrusion Detection System (Pasivní)</p>
+<ul>
+<li>chytřejší řešení než Firewall, protože signalizuje pomocí alertu pokud se jedná o neoprávněný průnik do vnitřní sítě</li>
+<li>hlavním prvkem je senzor, který obsahuje mechanismy pro detekci škodlivých a nebezpečných kódů</li>
+<li>zachytí nežádoucí komunikaci a okamžitě vygeneruje alert, ten může být zaslán přímo do SIEM společně se zapsaným logem</li>
+</ul>
+<h2 id="ips">
+  IPS
+  <a class="anchor" href="#ips">#</a>
+</h2>
+<ul>
+<li>funguje jako IDS, ale navíc umí blokovat nežádoucí komunikaci díky rozpoznávání signatur kyb. útoků</li>
+<li>reaguje na podezřelé aktivity resetováním spojení nebo nastavením směrovače/firewallu tak, aby blokoval provoz v síti z podezřelého škodlivého zdroje</li>
+<li>Host Intrusion Prevention Systems (HIPS) X Network Based Intrusion Prevention Systems</li>
+</ul>
+<p><img src="/4smn/idsips.png" alt="idsips" /></p>
+<h2 id="zapojení-ips-a-ids">
+  Zapojení IPS a IDS
+  <a class="anchor" href="#zapojen%c3%ad-ips-a-ids">#</a>
+</h2>
+<p><img src="/4smn/nasazeni.png" alt="nasazeni" /></p>
 </article>
  
       
@@ -374,7 +482,23 @@ datům kontext, jako jsou informace o uživatelích, výsledcích bezpečnostní
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#jaké-události-zaznamenávat-a-monitorovat">Jaké události zaznamenávat a monitorovat</a></li>
+    <li><a href="#příklady-korelací">Příklady korelací</a></li>
+    <li><a href="#výhody-siem">Výhody SIEM</a></li>
+    <li><a href="#nejčastější-chyby-při-používání">Nejčastější chyby při používání</a></li>
+    <li><a href="#dmz">DMZ</a></li>
+    <li><a href="#firewall">Firewall</a>
+      <ul>
+        <li><a href="#nevýhody">Nevýhody</a></li>
+      </ul>
+    </li>
+    <li><a href="#ids">IDS</a></li>
+    <li><a href="#ips">IPS</a></li>
+    <li><a href="#zapojení-ips-a-ids">Zapojení IPS a IDS</a></li>
+  </ul>
+</nav>
 
 
  
